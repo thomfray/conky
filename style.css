@@ -1,0 +1,49 @@
+body {
+	font-size: 2em;
+}
+
+#topHalf {
+	background-color: #b3ccff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 20px;
+	border-width: 3px;
+	border-style: solid;
+	margin: 10px;
+}
+
+#bottomHalf {
+	height: 25vh;
+	background-color: #fed8a0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 20px;
+	border-width: 3px;
+	border-style: solid;
+	margin: 10px;
+}
+
+form div {
+	padding-top: 10px;
+}
+
+input {
+	border-radius: 5px;
+}
+
+#operator {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.operSpan {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-width: 1.5px;
+	border-radius: 5px;
+	border-style: solid;
+}

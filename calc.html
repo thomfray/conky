@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<script src="../jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<div id="topHalf" class="container-fluid">
+		
+		
+		<form>
+			<div class="row row-centered">
+				<div class="col-xs-1 col-sm-3 col-md-4"></div>
+
+					<input id="num1" class="col-xs-10 col-sm-6 col-centered col-md-4" type="number" step="any" name="num1" placeholder="Enter a number">
+				</div>
+
+			<div class="row row-centered">
+				<div class="col-sm-4"></div>
+				<div id="operator" class="col-sm-4 text-center">
+					<span class="operSpan">
+						<label class="radio-inline"><input type="radio" name="radio" value="+">&plus;</label>
+					</span>
+					<span class="operSpan">
+						<label class="radio-inline"><input type="radio" name="radio" value="-">&minus;</label>
+					</span>
+					<span class="operSpan">
+						<label class="radio-inline"><input type="radio" name="radio" value="*">&times;</label>
+					</span>
+					<span class="operSpan">
+						<label class="radio-inline"><input type="radio" name="radio" value="/">&divide;</label>
+					</span>					
+				</div>
+			</div>
+
+			<div class="row row-centered">
+				<div class="col-xs-1 col-sm-3 col-md-4"></div>
+					<input id="num2" class="col-xs-10 col-sm-6 col-centered col-md-4" type="number" step="any" name="num2" placeholder="Enter a number">
+			</div>	
+
+			<div class="row row-centered">
+				<div class="col-xs-5"></div>
+					<input id="calc" class="col-sm-2 btn btn-default" type="button" name="submit" value="Go Calc!">
+			</div>
+
+		</form>
+	</div>
+	
+<div id="bottomHalf" class="container-fluid">
+	<div class="row">
+		<div class="col-xs-1 col-sm-3 col-md-4"></div>
+			<p id="ans" class="col-xs-10 col-sm-6 col-centered col-md-4 text-center">Your answer here.</p>	
+		</div>
+	</div>
+
+</div>
+<input id="test" class="btn btn-primary" type="submit" name="test" value="TEST">
+
+
+</body>
+</html>
