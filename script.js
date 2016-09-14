@@ -2,12 +2,12 @@ $(function() {
 	var num1 = '';
 	var num2 = '';
 	var oper = '';
-	var operWord;
-	var ans;
+	var operWord = '';
+	var ans = '';
 	console.log('VARs set');
 
-	var setCalc = function() {
-		console.log('setCalc ran');
+	function setCalc() {
+		console.log('setCalc function called');
 		$('#calc').click(function() {
 	 		num1 = parseInt($('#num1').val());
 	 		num2 = parseInt($('#num2').val());
@@ -37,7 +37,7 @@ $(function() {
 	}; /* setCalc */
 
 
-	var setReset = function() {
+	function setReset() {
 		console.log('setReset ran');
 		/* Clears and disables the input field */
 		$('#num1').val('');
@@ -68,12 +68,11 @@ $(function() {
 			num2 = '0';
 
 			setCalc();
-		});
-	};
+		}); // setReset click event
+	}; // setReset function
 
 	
-setCalc(); 	
-
+setCalc(); 	// Calls setCalc to set up form once DOM loads and setCalc function has been defined
 
 
 		
