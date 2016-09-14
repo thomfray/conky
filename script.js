@@ -1,4 +1,4 @@
-var main = function() {
+$(function() {
 	var num1 = '';
 	var num2 = '';
 	var oper = '';
@@ -92,7 +92,7 @@ setCalc();
 	$('#test').click(function() {
 		console.log("button works")
 	});
-};
+
 
 
 
@@ -115,4 +115,7 @@ setCalc();
 
 
 
-$(document).ready(main);
+
+}); /* end of main section */
+
+
