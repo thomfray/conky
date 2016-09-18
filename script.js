@@ -1,4 +1,5 @@
 $(function() {
+	debugger;
 	var num1 = '';
 	var num2 = '';
 	var oper = '';
@@ -30,8 +31,11 @@ $(function() {
 			var fullAns = num1 + operWord + num2 + " equals " + ans;
 			$('#ans').text(fullAns);
 
+			/* TESTING Removes the setClac event handler to make way for the reseter event handler on the button */
+			$('#calc').off('click')
+
 			/* Changes the calc button to the Reset button */
-			$('#calc').attr('id', 'setReset').attr('value', 'Reset').attr('name', 'reset');
+			$('#calc').attr('id', 'reseter').attr('value', 'Reset').attr('name', 'reset');
 			setReset();
 		});
 	}; /* setCalc */
@@ -53,7 +57,7 @@ $(function() {
 		
 
 		/* Adds the event handler reset functions to the button altered above */
-		$('#setReset').click(function() {
+		$('#reseter').click(function() {
 			$('#num1').attr('disabled', false);
 			$('#num2').attr('disabled', false);
 			$('#operator').attr('disabled', false);
