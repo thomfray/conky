@@ -71,6 +71,12 @@ $(function() {
 			num1 = '0';
 			num2 = '0';
 
+			/* TESTING Removes the reseter event handler to make way for the Calc event handler on the button */
+			$('#reseter').off('click')
+
+			/* Changes the Reset button back to the Calc button */
+			$('#reseter').attr('id', 'calc').attr('value', 'Go Calc!').attr('name', 'calc');
+
 			setCalc();
 		}); // setReset click event
 	}; // setReset function
