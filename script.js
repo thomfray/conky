@@ -1,5 +1,4 @@
 $(function() {
-	debugger;
 	var num1 = '';
 	var num2 = '';
 	var oper = '';
@@ -9,6 +8,7 @@ $(function() {
 
 	function setCalc() {
 		console.log('setCalc function called');
+		$('#num1').focus();
 		$('#calc').click(function() {
 	 		num1 = parseInt($('#num1').val());
 	 		num2 = parseInt($('#num2').val());
@@ -96,7 +96,7 @@ setCalc(); 	// Calls setCalc to set up form once DOM loads and setCalc function 
 	// 	}
 	// });
 
-	$('#num1').focus();
+
 
 	$('#test').click(function() {
 		console.log("button works")
