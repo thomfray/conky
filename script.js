@@ -82,46 +82,33 @@ $(function() {
 	}; // setReset function
 
 	
-setCalc(); 	// Calls setCalc to set up form once DOM loads and setCalc function has been defined
+	setCalc(); 	// Calls setCalc to set up form once DOM loads and setCalc function has been defined
 
 
 		
 	
 
 	// Key up event to check inputs are numbers
-	// NOT WORKING YET
-	// $('#num1').keyup(function() {
-	// 	if (isNaN($(this).val())) {
-	// 		console.log(NaN);
-	// 	}
-	// });
+	// TO DO: if NaN, then .... ????
+	$('#num1').keyup(function() {
+		if ($.isNumeric($(this).val())) {
+	 		console.log('keyup event handled');
+		} else {
+			console.log('NaN');
+		}
+	});
 
-
+	$('#num2').keyup(function() {
+		if ($.isNumeric($(this).val())) {
+	 		console.log('keyup event handled');
+		} else {
+			console.log('NaN');
+		}
+	});
 
 	$('#test').click(function() {
 		console.log("button works")
 	});
-
-
-
-
-// var reset = function() {
-// 	$('#reset').click(function() {
-// 		console.log('Works');
-// 		$(this).attr('value', 'Go Calc!');
-// 		var fullAns = 'Your Next Answer Here.'
-// 		$('#ans').text(fullAns);
-
-// 		$('#num1').attr('placeholder', 'Enter another number')
-// 		$('#num2').attr('placeholder', 'Enter another number')
-// 		$('#operator').val('+');
-// 		$('#num1').focus();
-// 	});
-
-
-
-// });
-
 
 
 
