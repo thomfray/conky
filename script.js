@@ -95,6 +95,7 @@ $(function() {
 	 		console.log('keyup event handled');
 		} else {
 			console.log('NaN');
+			$(this).addClass('has-danger');
 		}
 	});
 
@@ -109,6 +110,11 @@ $(function() {
 	$('#test').click(function() {
 		console.log("button works")
 	});
+
+	// This function is called by the keyup event handler if num1 or num2 are not numbers
+	notNum = function() {
+
+	};
 
 
 
