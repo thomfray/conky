@@ -52,9 +52,9 @@ $(function() {
 		$('#operator').attr('disabled', 'disabled');
 
 		/* Clears the placeholders  */
-		$('#num1').attr('placeholder', '')	
+		$('#num1').attr('placeholder', '')
 		$('#num2').attr('placeholder', '')
-		
+
 
 		/* Adds the event handler reset functions to the button altered above */
 		$('#reseter').click(function() {
@@ -81,34 +81,37 @@ $(function() {
 		}); // setReset click event
 	}; // setReset function
 
-	
+
 	setCalc(); 	// Calls setCalc to set up form once DOM loads and setCalc function has been defined
 
 
-		
-	
+
+
 
 	// Key up event to check inputs are numbers
 	// TO DO: if NaN, then .... ????
 	$('#num1').keyup(function() {
-		if ($.isNumeric($(this).val())) {
+		if ($.isNumeric($(this).val()) || $(this).val() == "") {
 	 		console.log('keyup event handled');
+			$('#calc').prop('disabled', false);
+			$(this).removeClass('numError');
 		} else {
 			console.log('NaN');
-			$(this).addClass('has-danger');
+			$(this).addClass('numError');
+			$('#calc').prop('disabled', true);
 		}
 	});
 
 	$('#num2').keyup(function() {
-		if ($.isNumeric($(this).val())) {
+		if ($.isNumeric($(this).val()) || $(this).val() == "") {
 	 		console.log('keyup event handled');
+			$(this).removeClass('numError');
+			$('#calc').prop('disabled', false);
 		} else {
 			console.log('NaN');
+			$(this).addClass('numError');
+			$('#calc').prop('disabled', true);
 		}
-	});
-
-	$('#test').click(function() {
-		console.log("button works")
 	});
 
 	// This function is called by the keyup event handler if num1 or num2 are not numbers
@@ -117,7 +120,11 @@ $(function() {
 	};
 
 
+	$('#test').click(function() {
+		console.log("button works")
+	});
+
+
+
 
 }); /* end of main section */
-
-

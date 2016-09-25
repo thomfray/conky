@@ -52,3 +52,8 @@ input {
 	border-color: red;
 	border-width: 3px;
 }
+
+.numError {
+	border: red;
+	color: red;
+}
